@@ -2,22 +2,26 @@
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
   # Which nixpkgs channel to use.
-  channel = "stable-23.11"; # or "unstable" or "stable-23.11"
+  channel = "stable-24.05"; # or "unstable" or "stable-23.11"
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.ghc
-    pkgs.hlint
     pkgs.cabal-install
-    pkgs.haskell-language-server
-    pkgs.stylish-haskell
+    pkgs.ghcid
+    pkgs.hlint
+    pkgs.haskellPackages.haskell-language-server 
+    pkgs.haskellPackages.implicit-hie
+    pkgs.haskellPackages.ghcide
+    pkgs.haskellPackages.hiedb
     pkgs.haskellPackages.fourmolu
   ];
   # Sets environment variables in the workspace
-  env = {};
+  env = { };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       # "vscodevim.vim"
+      "haskell.haskell"
       "justusadam.language-haskell"
     ];
     # Enable previews

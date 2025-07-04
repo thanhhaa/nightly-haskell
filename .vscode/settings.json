@@ -1,0 +1,22 @@
+{
+    "editor.tabSize": 2,
+    "haskell.manageHLS": "PATH",
+    "haskell.serverExecutablePath": "haskell-language-server",
+    "haskell.formattingProvider": "fourmolu",
+    // Use an external fourmolu executable
+    "haskell.plugin.fourmolu.config.external": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "files.associations": {
+        "*.hs": "haskell",
+        "*.lhs": "literate-haskell",
+        "cabal.project": "cabal",
+        "cabal.project.local": "cabal"
+    },
+    "haskell.plugin.eval.config.diff": true,
+    "haskell.plugin.eval.config.exception": true,
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true,
+}
