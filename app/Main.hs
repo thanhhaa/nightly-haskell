@@ -1,8 +1,5 @@
 module Main where
 
-import Data.Text (Text)
-import GHC.Generics (Generic)
-
 data Discount
   = DiscountPercent Int -- A percentage discount
   | DiscountConstant Int -- A constant discount
@@ -21,12 +18,6 @@ applyDiscount customer price (Many discounts) = go price discounts
  where
   go p [] = p
   go p (d : ds) = go (applyDiscount customer p d) ds
-
-data CreateTodo = CreateTodo
-  { createTodoTitle :: Text
-  , createTodoDescription :: Maybe Text
-  }
-  deriving (Show, Generic)
 
 main :: IO ()
 main = do

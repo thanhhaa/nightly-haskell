@@ -9,11 +9,13 @@
     pkgs.cabal-install
     pkgs.ghcid
     pkgs.hlint
-    pkgs.haskellPackages.haskell-language-server 
+    pkgs.haskellPackages.haskell-language-server
     pkgs.haskellPackages.implicit-hie
     pkgs.haskellPackages.ghcide
     pkgs.haskellPackages.hiedb
     pkgs.haskellPackages.fourmolu
+    # An experiment of formatting .cabal files
+    pkgs.haskellPackages.cabal-fmt
   ];
   # Sets environment variables in the workspace
   env = { };
