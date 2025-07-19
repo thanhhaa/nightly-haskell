@@ -1,3 +1,7 @@
+// haskell-language-server generate-default-config: 
+//     will print the json configuration with all default values. It can be used as template to modify it.
+// haskell-language-server vscode-extension-schema: 
+//      will print a json schema used to setup the haskell vscode extension. But it is useful to see what range of values can an option take and a description about it.
 {
     "editor.tabSize": 2,
     "haskell.manageHLS": "PATH",
@@ -5,6 +9,7 @@
     "haskell.formattingProvider": "fourmolu",
     // Use an external fourmolu executable
     "haskell.plugin.fourmolu.config.external": true,
+    // find . -name "*.cabal" -exec cabal-fmt --inplace {} \;
     "haskell.plugin.cabal-fmt.config.path": "cabal-fmt",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {

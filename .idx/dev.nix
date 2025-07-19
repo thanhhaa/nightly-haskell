@@ -16,6 +16,8 @@
     pkgs.haskellPackages.fourmolu
     # An experiment of formatting .cabal files
     pkgs.haskellPackages.cabal-fmt
+    pkgs.pkg-config
+    pkgs.tree
   ];
   # Sets environment variables in the workspace
   env = { };
